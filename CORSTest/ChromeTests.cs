@@ -3,6 +3,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
 using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Drawing.Imaging;
 using System.IO;
@@ -57,6 +58,8 @@ namespace CORSTest
             Assert.True(resultText != "", "Could not get result from Chrome");
             Assert.Contains("TotalProjects=", resultText, StringComparison.OrdinalIgnoreCase);
             Assert.DoesNotThrow(() => int.Parse(resultText.Substring(resultText.LastIndexOf("=") + 1)));
+            Console.WriteLine(resultText);
+            Trace.WriteLine(resultText);
         }
     }
 

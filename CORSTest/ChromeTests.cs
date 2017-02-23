@@ -28,7 +28,15 @@ namespace CORSTest
         {
             string filePath = Path.Combine(Environment.GetEnvironmentVariable("APPVEYOR_BUILD_FOLDER"), "index.html");
 
-            File.WriteAllText(filePath, File.ReadAllText(filePath).Replace("_token_placeholder_", Environment.GetEnvironmentVariable("API_TOKEN")));
+            var indexContents = File.ReadAllText(filePath);
+            
+            indexContents = indexContents.Replace("_url_placeholder_",
+                Environment.GetEnvironmentVariable("API_URL")));            
+
+            indexContents = indexContents.Replace("_token_placeholder_",
+                Environment.GetEnvironmentVariable("API_TOKEN")));
+                
+            File.WriteAllText(filePath, indexContents);
 
             driver.Navigate().GoToUrl((new Uri(filePath)).AbsoluteUri);
 

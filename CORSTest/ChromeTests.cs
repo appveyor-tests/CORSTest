@@ -58,7 +58,7 @@ namespace CORSTest
 
         public ChromeFixture()
         {
-            driver = new ChromeDriver(@"C:\tools\selenium");
+            driver = new ChromeDriver();
         }
 
         public ChromeDriver GetDriver()

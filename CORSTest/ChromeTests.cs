@@ -34,7 +34,7 @@ namespace CORSTest
 
             string resultText = "";
             DateTime end = DateTime.Now + TimeSpan.FromSeconds(20);
-            while (resultText == "" || DateTime.Now < end)
+            while (resultText == "" && DateTime.Now < end)
             {
                 try
                 {

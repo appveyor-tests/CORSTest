@@ -31,10 +31,10 @@ namespace CORSTest
             var indexContents = File.ReadAllText(filePath);
             
             indexContents = indexContents.Replace("_url_placeholder_",
-                Environment.GetEnvironmentVariable("API_URL")));            
+                Environment.GetEnvironmentVariable("API_URL"));            
 
             indexContents = indexContents.Replace("_token_placeholder_",
-                Environment.GetEnvironmentVariable("API_TOKEN")));
+                Environment.GetEnvironmentVariable("API_TOKEN"));
                 
             File.WriteAllText(filePath, indexContents);
 

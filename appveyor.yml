@@ -2,8 +2,8 @@ version: 1.0.{build}
 install:
   - nuget restore
 environment:
-  API_URL: https://staging-ci.appveyor.com
+  API_URL: https://ci.appveyor.com
   API_TOKEN:
-    secure: wUkjlZhu8pX+uDeqENrDGrfAwfhYMgkHFiOVCoAfpDs=
+    secure: CYNUgs2NaVj+RyCPl2W36Iw8ul6blGYsiwK3X5At2oI=
 build:
   verbosity: minimal
